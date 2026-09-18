@@ -179,8 +179,12 @@ export async function processCommentsPipeline(
   }
 
   // If custom API URL provided and valid, call the live API Gateway endpoint
-  if (customApiUrl && customApiUrl.trim().startsWith('http')) {
-    const endpoint = `${customApiUrl.replace(/\/$/, '')}/analyze`;
+  // Use the custom API URL when provided; otherwise use VITE_API_URL.
+  const apiUrl = customApiUrl?.trim() || import.meta.env.VITE_API_URL;
+
+  // If an API URL is available, call the live API Gateway endpoint.
+  if (apiUrl && apiUrl.startsWith('http')) {
+    const endpoint = `${apiUrl.replace(/\/$/, '')}/analyze`;
     const res = await fetch(endpoint, {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },

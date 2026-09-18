@@ -1,0 +1,6 @@
+{
+  "name": "Community Pulse AI",
+  "description": "Analyze community feedback using Amazon SageMaker sentiment classification and Amazon Bedrock generative insights.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

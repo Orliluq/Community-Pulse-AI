@@ -1,0 +1,388 @@
+{
+  "/CommunityPulseStack": [
+    {
+      "type": "aws:cdk:creationStack",
+      "data": [
+        "...jsii runtime, node internals...",
+        "(no user code in 10 frames, use --stack-trace-limit to capture more)"
+      ]
+    }
+  ],
+  "/CommunityPulseStack/SentimentModel": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "SentimentModel"
+    },
+    {
+      "type": "aws:cdk:creationStack",
+      "data": [
+        "...jsii runtime, node internals...",
+        "(no user code in 10 frames, use --stack-trace-limit to capture more)"
+      ]
+    }
+  ],
+  "/CommunityPulseStack/SentimentEndpointConfig": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "SentimentEndpointConfig"
+    },
+    {
+      "type": "aws:cdk:creationStack",
+      "data": [
+        "...jsii runtime, node internals...",
+        "(no user code in 10 frames, use --stack-trace-limit to capture more)"
+      ]
+    }
+  ],
+  "/CommunityPulseStack/SentimentEndpoint": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "SentimentEndpoint"
+    },
+    {
+      "type": "aws:cdk:creationStack",
+      "data": [
+        "...jsii runtime, node internals...",
+        "(no user code in 10 frames, use --stack-trace-limit to capture more)"
+      ]
+    }
+  ],
+  "/CommunityPulseStack/ApiEndpointUrl": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "ApiEndpointUrl"
+    },
+    {
+      "type": "aws:cdk:creationStack",
+      "data": [
+        "...jsii runtime, node internals...",
+        "(no user code in 10 frames, use --stack-trace-limit to capture more)"
+      ]
+    }
+  ],
+  "/CommunityPulseStack/SageMakerEndpointName": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "SageMakerEndpointName"
+    },
+    {
+      "type": "aws:cdk:creationStack",
+      "data": [
+        "...jsii runtime, node internals...",
+        "(no user code in 10 frames, use --stack-trace-limit to capture more)"
+      ]
+    }
+  ],
+  "/CommunityPulseStack/LambdaFunctionName": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "LambdaFunctionName"
+    },
+    {
+      "type": "aws:cdk:creationStack",
+      "data": [
+        "...jsii runtime, node internals...",
+        "(no user code in 10 frames, use --stack-trace-limit to capture more)"
+      ]
+    }
+  ],
+  "/CommunityPulseStack/BedrockModelId": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "BedrockModelId"
+    },
+    {
+      "type": "aws:cdk:creationStack",
+      "data": [
+        "...jsii runtime, node internals...",
+        "(no user code in 10 frames, use --stack-trace-limit to capture more)"
+      ]
+    }
+  ],
+  "/CommunityPulseStack/BootstrapVersion": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "BootstrapVersion"
+    },
+    {
+      "type": "aws:cdk:creationStack",
+      "data": [
+        "...aws-cdk-lib...",
+        "(no user code in 10 frames, use --stack-trace-limit to capture more)"
+      ]
+    }
+  ],
+  "/CommunityPulseStack/CheckBootstrapVersion": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "CheckBootstrapVersion"
+    },
+    {
+      "type": "aws:cdk:creationStack",
+      "data": [
+        "...aws-cdk-lib...",
+        "(no user code in 10 frames, use --stack-trace-limit to capture more)"
+      ]
+    }
+  ],
+  "/CommunityPulseStack/SageMakerExecutionRole/Resource": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "SageMakerExecutionRole7843F3B8"
+    },
+    {
+      "type": "aws:cdk:creationStack",
+      "data": [
+        "...aws-cdk-lib, jsii runtime, node internals...",
+        "(no user code in 10 frames, use --stack-trace-limit to capture more)"
+      ]
+    }
+  ],
+  "/CommunityPulseStack/LambdaExecutionRole/Resource": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "LambdaExecutionRoleD5C26073"
+    },
+    {
+      "type": "aws:cdk:creationStack",
+      "data": [
+        "...aws-cdk-lib, jsii runtime, node internals...",
+        "(no user code in 10 frames, use --stack-trace-limit to capture more)"
+      ]
+    }
+  ],
+  "/CommunityPulseStack/LambdaLogGroup/Resource": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "LambdaLogGroup2CA1C11F"
+    },
+    {
+      "type": "aws:cdk:creationStack",
+      "data": [
+        "...aws-cdk-lib, jsii runtime, node internals...",
+        "(no user code in 10 frames, use --stack-trace-limit to capture more)"
+      ]
+    }
+  ],
+  "/CommunityPulseStack/AnalyzerFunction/Resource": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "AnalyzerFunction62EF8EC0"
+    },
+    {
+      "type": "aws:cdk:creationStack",
+      "data": [
+        "...aws-cdk-lib, jsii runtime, node internals...",
+        "(no user code in 10 frames, use --stack-trace-limit to capture more)"
+      ]
+    }
+  ],
+  "/CommunityPulseStack/CommunityPulseApi/Resource": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "CommunityPulseApi7E9C34FA"
+    },
+    {
+      "type": "aws:cdk:creationStack",
+      "data": [
+        "...aws-cdk-lib, jsii runtime, node internals...",
+        "(no user code in 10 frames, use --stack-trace-limit to capture more)"
+      ]
+    }
+  ],
+  "/CommunityPulseStack/CommunityPulseApi/Account": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "CommunityPulseApiAccount2F45896F"
+    },
+    {
+      "type": "aws:cdk:creationStack",
+      "data": [
+        "...aws-cdk-lib, jsii runtime, node internals...",
+        "(no user code in 10 frames, use --stack-trace-limit to capture more)"
+      ]
+    }
+  ],
+  "/CommunityPulseStack/CommunityPulseApi/Endpoint": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "CommunityPulseApiEndpoint7B7CB8E9"
+    },
+    {
+      "type": "aws:cdk:creationStack",
+      "data": [
+        "...aws-cdk-lib, jsii runtime, node internals...",
+        "(no user code in 10 frames, use --stack-trace-limit to capture more)"
+      ]
+    }
+  ],
+  "/CommunityPulseStack/LambdaErrorAlarm/Resource": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "LambdaErrorAlarm646BFA4C"
+    },
+    {
+      "type": "aws:cdk:creationStack",
+      "data": [
+        "...aws-cdk-lib, jsii runtime, node internals...",
+        "(no user code in 10 frames, use --stack-trace-limit to capture more)"
+      ]
+    }
+  ],
+  "/CommunityPulseStack/OperationalDashboard/Resource": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "OperationalDashboard8C0EDB2C"
+    },
+    {
+      "type": "aws:cdk:creationStack",
+      "data": [
+        "...aws-cdk-lib, jsii runtime, node internals...",
+        "(no user code in 10 frames, use --stack-trace-limit to capture more)"
+      ]
+    }
+  ],
+  "/CommunityPulseStack/CDKMetadata/Default": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "CDKMetadata"
+    },
+    {
+      "type": "aws:cdk:creationStack",
+      "data": [
+        "...aws-cdk-lib, jsii runtime...",
+        "(no user code in 10 frames, use --stack-trace-limit to capture more)"
+      ]
+    }
+  ],
+  "/CommunityPulseStack/LambdaExecutionRole/DefaultPolicy/Resource": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "LambdaExecutionRoleDefaultPolicy6D69732F"
+    },
+    {
+      "type": "aws:cdk:creationStack",
+      "data": [
+        "...aws-cdk-lib, jsii runtime...",
+        "(no user code in 10 frames, use --stack-trace-limit to capture more)"
+      ]
+    }
+  ],
+  "/CommunityPulseStack/CommunityPulseApi/CloudWatchRole/Resource": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "CommunityPulseApiCloudWatchRole5F54460C"
+    },
+    {
+      "type": "aws:cdk:creationStack",
+      "data": [
+        "...aws-cdk-lib, jsii runtime...",
+        "(no user code in 10 frames, use --stack-trace-limit to capture more)"
+      ]
+    }
+  ],
+  "/CommunityPulseStack/CommunityPulseApi/Deployment/Resource": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "CommunityPulseApiDeployment2F59A42Db90df01d18c93640eb60e0f64466a0ca"
+    },
+    {
+      "type": "aws:cdk:creationStack",
+      "data": [
+        "...aws-cdk-lib, jsii runtime...",
+        "(no user code in 10 frames, use --stack-trace-limit to capture more)"
+      ]
+    }
+  ],
+  "/CommunityPulseStack/CommunityPulseApi/DeploymentStage.prod/Resource": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "CommunityPulseApiDeploymentStageprod3833794A"
+    },
+    {
+      "type": "aws:cdk:creationStack",
+      "data": [
+        "...aws-cdk-lib, jsii runtime...",
+        "(no user code in 10 frames, use --stack-trace-limit to capture more)"
+      ]
+    }
+  ],
+  "/CommunityPulseStack/CommunityPulseApi/Default/OPTIONS/Resource": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "CommunityPulseApiOPTIONS76BA285E"
+    },
+    {
+      "type": "aws:cdk:creationStack",
+      "data": [
+        "...aws-cdk-lib, jsii runtime...",
+        "(no user code in 10 frames, use --stack-trace-limit to capture more)"
+      ]
+    }
+  ],
+  "/CommunityPulseStack/CommunityPulseApi/Default/analyze/Resource": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "CommunityPulseApianalyzeF95A7FF9"
+    },
+    {
+      "type": "aws:cdk:creationStack",
+      "data": [
+        "...aws-cdk-lib, jsii runtime, node internals...",
+        "(no user code in 10 frames, use --stack-trace-limit to capture more)"
+      ]
+    }
+  ],
+  "/CommunityPulseStack/CommunityPulseApi/Default/analyze/OPTIONS/Resource": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "CommunityPulseApianalyzeOPTIONSFC8E5B49"
+    },
+    {
+      "type": "aws:cdk:creationStack",
+      "data": [
+        "...aws-cdk-lib, jsii runtime...",
+        "(no user code in 10 frames, use --stack-trace-limit to capture more)"
+      ]
+    }
+  ],
+  "/CommunityPulseStack/CommunityPulseApi/Default/analyze/POST/ApiPermission.CommunityPulseStackCommunityPulseApiB8ECB07B.POST..analyze": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "CommunityPulseApianalyzePOSTApiPermissionCommunityPulseStackCommunityPulseApiB8ECB07BPOSTanalyzeDF41B953"
+    },
+    {
+      "type": "aws:cdk:creationStack",
+      "data": [
+        "...aws-cdk-lib, jsii runtime...",
+        "(no user code in 10 frames, use --stack-trace-limit to capture more)"
+      ]
+    }
+  ],
+  "/CommunityPulseStack/CommunityPulseApi/Default/analyze/POST/ApiPermission.Test.CommunityPulseStackCommunityPulseApiB8ECB07B.POST..analyze": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "CommunityPulseApianalyzePOSTApiPermissionTestCommunityPulseStackCommunityPulseApiB8ECB07BPOSTanalyze74B5C641"
+    },
+    {
+      "type": "aws:cdk:creationStack",
+      "data": [
+        "...aws-cdk-lib, jsii runtime...",
+        "(no user code in 10 frames, use --stack-trace-limit to capture more)"
+      ]
+    }
+  ],
+  "/CommunityPulseStack/CommunityPulseApi/Default/analyze/POST/Resource": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "CommunityPulseApianalyzePOST6D5DC652"
+    },
+    {
+      "type": "aws:cdk:creationStack",
+      "data": [
+        "...aws-cdk-lib, jsii runtime...",
+        "(no user code in 10 frames, use --stack-trace-limit to capture more)"
+      ]
+    }
+  ]
+}

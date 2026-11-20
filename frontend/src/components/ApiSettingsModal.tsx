@@ -72,7 +72,7 @@ export const ApiSettingsModal: React.FC<ApiSettingsModalProps> = ({
               role="switch"
               aria-checked={filterLowConfidence}
               onClick={() => setFilterLowConfidence(!filterLowConfidence)}
-              className={`relative inline-flex h-6 w-11 flex-shrink-0 cursor-pointer rounded-full border-2 border-transparent transition-colors duration-200 ease-in-out focus:outline-none ${
+              className={`relative inline-flex h-6 w-11 shrink-0 cursor-pointer rounded-full border-2 border-transparent transition-colors duration-200 ease-in-out focus:outline-none ${
                 filterLowConfidence ? 'bg-indigo-600' : 'bg-slate-300 dark:bg-slate-800'
               }`}
             >
@@ -182,7 +182,7 @@ export const ApiSettingsModal: React.FC<ApiSettingsModalProps> = ({
               className="w-full bg-slate-50 dark:bg-slate-950 border border-slate-300 dark:border-slate-800 rounded-xl px-3.5 py-2 text-xs text-slate-900 dark:text-slate-200 placeholder:text-slate-400 dark:placeholder:text-slate-600 focus:outline-none focus:border-indigo-500 font-mono"
             />
             <div className="text-[11px] text-slate-500 dark:text-slate-400 flex items-center gap-1">
-              <AlertCircle className="w-3.5 h-3.5 text-indigo-600 dark:text-indigo-400 flex-shrink-0" />
+              <AlertCircle className="w-3.5 h-3.5 text-indigo-600 dark:text-indigo-400 shrink-0" />
               <span>Copy from <code className="text-slate-700 dark:text-slate-300">CommunityPulseStack.ApiEndpointUrl</code> output.</span>
             </div>
           </div>

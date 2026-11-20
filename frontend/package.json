@@ -1,8 +1,16 @@
 {
-  "name": "react-example",
+  "name": "community-pulse-ai",
   "private": true,
   "version": "0.0.0",
   "type": "module",
+  "description": "Community Pulse AI - Real-time sentiment analysis for community feedback",
+  "author": "Orli Dun",
+  "license": "MIT",
+  "homepage": "https://github.com/Orliluq/Community-Pulse-AI",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Orliluq/Community-Pulse-AI.git"
+  },
   "scripts": {
     "dev": "vite --port=3000 --host=0.0.0.0",
     "build": "vite build",

@@ -316,21 +316,21 @@ export const SentimentSummary: React.FC<SentimentSummaryProps> = ({ stats, previ
           {positive_pct > 0 && (
             <div
               style={{ width: `${positive_pct}%` }}
-              className="h-full bg-gradient-to-r from-emerald-500 to-emerald-400 rounded-l-full transition-all duration-700 ease-out"
+              className="h-full bg-linear-to-r from-emerald-500 to-emerald-400 rounded-l-full transition-all duration-700 ease-out"
               title={`Positive: ${positive_pct}% (${positive_count})`}
             />
           )}
           {neutral_pct > 0 && (
             <div
               style={{ width: `${neutral_pct}%` }}
-              className="h-full bg-gradient-to-r from-amber-500 to-amber-400 transition-all duration-700 ease-out"
+              className="h-full bg-linear-to-r from-amber-500 to-amber-400 transition-all duration-700 ease-out"
               title={`Neutral: ${neutral_pct}% (${neutral_count})`}
             />
           )}
           {negative_pct > 0 && (
             <div
               style={{ width: `${negative_pct}%` }}
-              className="h-full bg-gradient-to-r from-rose-500 to-rose-400 rounded-r-full transition-all duration-700 ease-out"
+              className="h-full bg-linear-to-r from-rose-500 to-rose-400 rounded-r-full transition-all duration-700 ease-out"
               title={`Negative: ${negative_pct}% (${negative_count})`}
             />
           )}

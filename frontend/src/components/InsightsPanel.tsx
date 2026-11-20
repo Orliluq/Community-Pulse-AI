@@ -118,7 +118,7 @@ export const InsightsPanel: React.FC<InsightsPanelProps> = ({
       </div>
 
       {/* 1. Narrative Executive Summary */}
-      <div className="bg-purple-50/70 dark:bg-gradient-to-r dark:from-purple-950/20 dark:via-slate-900 dark:to-indigo-950/20 border border-purple-200 dark:border-purple-500/20 rounded-xl p-4.5 print-border">
+      <div className="bg-purple-50/70 dark:bg-linear-to-r dark:from-purple-950/20 dark:via-slate-900 dark:to-indigo-950/20 border border-purple-200 dark:border-purple-500/20 rounded-xl p-4.5 print-border">
         <h3 className="text-xs font-semibold uppercase tracking-wider text-purple-800 dark:text-purple-300 mb-2 flex items-center gap-1.5">
           <Sparkles className="w-3.5 h-3.5 text-purple-600 dark:text-purple-400" />
           Executive Summary
@@ -219,7 +219,7 @@ export const InsightsPanel: React.FC<InsightsPanelProps> = ({
               key={i}
               className="flex items-start gap-3 p-3 rounded-xl bg-slate-50 dark:bg-slate-950/50 border border-slate-200 dark:border-slate-800/80 hover:border-slate-300 dark:hover:border-slate-700/80 transition-colors print-page-break-avoid"
             >
-              <div className="w-5 h-5 rounded-full bg-amber-100 dark:bg-amber-500/10 border border-amber-300 dark:border-amber-500/20 flex items-center justify-center text-amber-700 dark:text-amber-400 font-mono text-[11px] font-bold flex-shrink-0 mt-0.5">
+              <div className="w-5 h-5 rounded-full bg-amber-100 dark:bg-amber-500/10 border border-amber-300 dark:border-amber-500/20 flex items-center justify-center text-amber-700 dark:text-amber-400 font-mono text-[11px] font-bold shrink-0 mt-0.5">
                 {i + 1}
               </div>
               <p className="text-xs text-slate-700 dark:text-slate-300 leading-relaxed">
@@ -256,7 +256,7 @@ export const InsightsPanel: React.FC<InsightsPanelProps> = ({
                 }`}
               >
                 <div
-                  className={`w-5 h-5 rounded-md flex items-center justify-center border transition-all flex-shrink-0 mt-0.5 ${
+                  className={`w-5 h-5 rounded-md flex items-center justify-center border transition-all shrink-0 mt-0.5 ${
                     isDone
                       ? 'bg-emerald-600 border-emerald-500 text-white'
                       : 'border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-900 text-transparent'

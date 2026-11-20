@@ -48,7 +48,7 @@ export const SentimentShiftAlert: React.FC<SentimentShiftAlertProps> = ({
         <div className="flex items-start gap-3">
           {/* Icon Badge */}
           <div
-            className={`w-9 h-9 rounded-xl flex items-center justify-center flex-shrink-0 mt-0.5 border ${
+            className={`w-9 h-9 rounded-xl flex items-center justify-center shrink-0 mt-0.5 border ${
               isPositiveShift
                 ? 'bg-emerald-100 dark:bg-emerald-500/20 text-emerald-700 dark:text-emerald-300 border-emerald-300 dark:border-emerald-500/30'
                 : 'bg-rose-100 dark:bg-rose-500/20 text-rose-700 dark:text-rose-300 border-rose-300 dark:border-rose-500/30'

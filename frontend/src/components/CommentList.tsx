@@ -228,7 +228,7 @@ export const CommentList: React.FC<CommentListProps> = ({
             {/* Checkbox for Bulk Delete */}
             <button
               onClick={() => handleToggleSelect(comment.originalIndex)}
-              className="mt-0.5 text-slate-400 hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors flex-shrink-0 cursor-pointer no-print"
+              className="mt-0.5 text-slate-400 hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors shrink-0 cursor-pointer no-print"
               title={isSelected ? 'Deselect comment' : 'Select comment for bulk action'}
             >
               {isSelected ? (
@@ -238,7 +238,7 @@ export const CommentList: React.FC<CommentListProps> = ({
               )}
             </button>
 
-            <span className="text-[10px] font-mono text-slate-500 bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 px-1.5 py-0.5 rounded mt-0.5 flex-shrink-0">
+            <span className="text-[10px] font-mono text-slate-500 bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 px-1.5 py-0.5 rounded mt-0.5 shrink-0">
               #{displayIdx + 1}
             </span>
 
@@ -273,7 +273,7 @@ export const CommentList: React.FC<CommentListProps> = ({
           </div>
 
           {/* Right: Actions, Sentiment Badge & Score Meter */}
-          <div className="flex flex-col items-end gap-1.5 flex-shrink-0 min-w-[130px]">
+          <div className="flex flex-col items-end gap-1.5 shrink-0 min-w-32.5">
             <div className="flex items-center gap-1.5">
               {isLowConf && (
                 <span
@@ -411,7 +411,7 @@ export const CommentList: React.FC<CommentListProps> = ({
       {filterLowConfidence && lowConfidenceCount > 0 && (
         <div className="p-3 bg-amber-50 dark:bg-amber-950/30 border border-amber-200 dark:border-amber-500/30 rounded-xl text-xs text-amber-900 dark:text-amber-200 flex flex-col sm:flex-row sm:items-center justify-between gap-2 no-print">
           <div className="flex items-center gap-2">
-            <ShieldAlert className="w-4 h-4 text-amber-600 dark:text-amber-400 flex-shrink-0" />
+            <ShieldAlert className="w-4 h-4 text-amber-600 dark:text-amber-400 shrink-0" />
             <span>
               {isFilteringActive ? (
                 <>
@@ -612,7 +612,7 @@ export const CommentList: React.FC<CommentListProps> = ({
       </div>
 
       {/* Comments List Content */}
-      <div className="space-y-4 max-h-[560px] overflow-y-auto pr-1">
+      <div className="space-y-4 max-h-140 overflow-y-auto pr-1">
         {filteredComments.length === 0 ? (
           <div className="text-center py-12 text-slate-500 text-xs space-y-2">
             <p>No comments match your search or filter criteria.</p>

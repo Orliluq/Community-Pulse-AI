@@ -166,7 +166,7 @@ export const SentimentTimelineChart: React.FC<SentimentTimelineChartProps> = ({
       {/* Info notice when only 1 run exists */}
       {history.length === 1 && (
         <div className="p-3 bg-indigo-50 dark:bg-indigo-950/20 border border-indigo-200 dark:border-indigo-500/20 rounded-xl text-xs text-indigo-800 dark:text-indigo-300 flex items-center gap-2 no-print">
-          <History className="w-4 h-4 text-indigo-600 dark:text-indigo-400 flex-shrink-0" />
+          <History className="w-4 h-4 text-indigo-600 dark:text-indigo-400 shrink-0" />
           <span>
             First analysis run recorded. Select a different preset or enter custom comments above and click <strong>"Analyze with AWS"</strong> to visualize multi-run trends over time.
           </span>

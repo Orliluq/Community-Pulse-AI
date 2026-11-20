@@ -53,7 +53,7 @@ export const ArchitectureViewer: React.FC = () => {
 
         {/* Interactive Architecture Flow Diagram */}
         <div className="p-4 bg-slate-50 dark:bg-slate-950/80 rounded-xl border border-slate-200 dark:border-slate-800/80 overflow-x-auto">
-          <div className="min-w-[760px] flex items-center justify-between gap-2 text-xs">
+          <div className="min-w-190 flex items-center justify-between gap-2 text-xs">
             
             {/* Step 1: User / Browser */}
             <div className="flex-1 bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-700/70 p-3 rounded-xl text-center space-y-1 shadow-xs">
@@ -62,7 +62,7 @@ export const ArchitectureViewer: React.FC = () => {
               <div className="text-[11px] text-slate-500 font-mono">POST /analyze (JSON)</div>
             </div>
 
-            <ChevronRight className="w-4 h-4 text-slate-400 flex-shrink-0" />
+            <ChevronRight className="w-4 h-4 text-slate-400 shrink-0" />
 
             {/* Step 2: Amazon API Gateway */}
             <div className="flex-1 bg-amber-50 dark:bg-amber-950/20 border border-amber-200 dark:border-amber-500/30 p-3 rounded-xl text-center space-y-1">
@@ -71,7 +71,7 @@ export const ArchitectureViewer: React.FC = () => {
               <div className="text-[11px] text-amber-700/80 dark:text-amber-400/80">REST API + CORS</div>
             </div>
 
-            <ChevronRight className="w-4 h-4 text-slate-400 flex-shrink-0" />
+            <ChevronRight className="w-4 h-4 text-slate-400 shrink-0" />
 
             {/* Step 3: AWS Lambda Orchestrator */}
             <div className="flex-1 bg-indigo-50 dark:bg-indigo-950/30 border border-indigo-200 dark:border-indigo-500/30 p-3 rounded-xl text-center space-y-1">
@@ -80,7 +80,7 @@ export const ArchitectureViewer: React.FC = () => {
               <div className="text-[11px] text-indigo-700/80 dark:text-indigo-400/80">Batching & Parsing</div>
             </div>
 
-            <ChevronRight className="w-4 h-4 text-slate-400 flex-shrink-0" />
+            <ChevronRight className="w-4 h-4 text-slate-400 shrink-0" />
 
             {/* Step 4: Split to ML & GenAI */}
             <div className="flex-2 flex flex-col gap-2">

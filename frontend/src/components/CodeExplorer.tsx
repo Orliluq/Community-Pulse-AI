@@ -261,7 +261,7 @@ export const CodeExplorer: React.FC = () => {
       </div>
 
       {/* Code Display */}
-      <pre className="bg-slate-950 border border-slate-800 rounded-xl p-4 text-xs font-mono text-slate-200 overflow-x-auto max-h-[500px] leading-relaxed">
+      <pre className="bg-slate-950 border border-slate-800 rounded-xl p-4 text-xs font-mono text-slate-200 overflow-x-auto max-h-125 leading-relaxed">
         {active.content}
       </pre>
     </div>

@@ -175,9 +175,12 @@ export const CommentInput: React.FC<CommentInputProps> = ({ onAnalyze, isLoading
             Upload CSV
           </button>
           <input
+            id="comments-csv-file"
+            name="commentsCsvFile"
             ref={fileInputRef}
             type="file"
             accept=".csv,text/csv"
+            aria-label="Upload comments CSV file"
             className="hidden"
             onChange={handleFileUpload}
           />
@@ -199,6 +202,9 @@ export const CommentInput: React.FC<CommentInputProps> = ({ onAnalyze, isLoading
         onDrop={handleDrop}
       >
         <textarea
+          id="comments-input"
+          name="comments"
+          aria-label="Citizen feedback comments"
           value={text}
           onChange={(e) => {
             setText(e.target.value);

@@ -20,7 +20,7 @@ const NEUTRAL_PATTERNS = [
 
 export function classifyCommentSentiment(text: string): { label: SentimentLabel; score: number } {
   const lower = text.toLowerCase();
-  
+
   let posScore = 0;
   let negScore = 0;
   let neuScore = 0.15; // base prior for neutral
@@ -119,13 +119,13 @@ export function generateBedrockInsights(
 
   // Generate specific insights
   const insights: string[] = [];
-  
+
   if (posCount > 0) {
     insights.push(
       `Recreational and cultural initiatives represent the strongest satisfaction driver (${posPct}% favorable overall), particularly communal gathering areas and neighborhood greenways.`
     );
   }
-  
+
   if (negCount > 0) {
     insights.push(
       `Road conditions (such as pothole damage) and service unpredictability (trash collection delays and bus wait times) account for the majority of severe negative sentiment.`
@@ -184,17 +184,40 @@ export async function processCommentsPipeline(
 
   // If an API URL is available, call the live API Gateway endpoint.
   if (apiUrl && apiUrl.startsWith('http')) {
-    const endpoint = `${apiUrl.replace(/\/$/, '')}/analyze`;
-    const res = await fetch(endpoint, {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ comments: sanitized })
-    });
-    if (!res.ok) {
-      const err = await res.json().catch(() => ({ error: `HTTP ${res.status}` }));
-      throw new Error(err.error || `API returned HTTP ${res.status}`);
-    }
-    return await res.json();
+
+const endpoint = `${apiUrl.replace(/\/$/, '')}/analyze`;
+
+for (let attempt = 0; attempt < 2; attempt++) {
+  const res = await fetch(endpoint, {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({ comments: sanitized })
+  });
+
+  // API Gateway timed out. Give SageMaker time to finish its cold start.
+  if (res.status === 504 && attempt === 0) {
+    console.warn(
+      'API Gateway timeout. Retrying once after SageMaker initialization...'
+    );
+
+    await new Promise(resolve => setTimeout(resolve, 3000));
+    continue;
+  }
+
+  if (!res.ok) {
+    const err = await res.json().catch(() => ({
+      error: `HTTP ${res.status}`
+    }));
+
+    throw new Error(
+      err.message || err.error || `API returned HTTP ${res.status}`
+    );
+  }
+
+  return await res.json() as AnalysisResponse;
+}
+
+throw new Error('Analysis failed after retrying the API request.');
   }
 
   // Built-in AWS pipeline emulator
@@ -228,5 +251,6 @@ export async function processCommentsPipeline(
     main_topics: bedrockData.main_topics,
     insights: bedrockData.insights,
     suggested_actions: bedrockData.suggested_actions,
+    analysis_status: 'demo',
   };
 }

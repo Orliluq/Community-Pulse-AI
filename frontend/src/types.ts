@@ -1,4 +1,5 @@
 export type SentimentLabel = 'positive' | 'neutral' | 'negative';
+export type AnalysisStatus = 'complete' | 'partial' | 'demo';
 
 export interface CommentResult {
   text: string;
@@ -25,6 +26,7 @@ export interface BedrockAnalysis {
 
 export interface AnalysisResponse extends SentimentStats, BedrockAnalysis {
   comments: CommentResult[];
+  analysis_status?: AnalysisStatus;
 }
 
 export interface PipelineStep {

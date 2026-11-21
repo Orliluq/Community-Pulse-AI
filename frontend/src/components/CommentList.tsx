@@ -384,6 +384,9 @@ export const CommentList: React.FC<CommentListProps> = ({
           {/* Enhanced CSV Export with Category Filter Selector */}
           <div className="flex items-center gap-1 bg-slate-100 dark:bg-slate-800/80 p-0.5 rounded-xl border border-slate-200 dark:border-slate-700">
             <select
+              id="csv-export-category"
+              name="csvExportCategory"
+              aria-label="CSV export sentiment category"
               value={exportCategory}
               onChange={(e) => setExportCategory(e.target.value as SentimentLabel | 'all')}
               className="text-xs bg-transparent text-slate-700 dark:text-slate-300 px-2 py-1 focus:outline-none cursor-pointer font-medium"
@@ -499,6 +502,9 @@ export const CommentList: React.FC<CommentListProps> = ({
         <div className="relative flex-1 max-w-lg">
           <Search className="w-4 h-4 absolute left-3.5 top-1/2 -translate-y-1/2 text-slate-400 dark:text-slate-500" />
           <input
+            id="comment-search"
+            name="commentSearch"
+            aria-label="Search comments"
             type="text"
             value={searchTerm}
             onChange={(e) => setSearchTerm(e.target.value)}

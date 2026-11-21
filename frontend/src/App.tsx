@@ -356,7 +356,7 @@ export default function App() {
             {error && (
               <div className="p-4 rounded-2xl bg-rose-500/10 border border-rose-500/20 text-rose-800 dark:text-rose-300 text-sm flex items-start justify-between gap-3 no-print">
                 <div className="flex items-start gap-2.5">
-                  <AlertTriangle className="w-5 h-5 text-rose-500 flex-shrink-0 mt-0.5" />
+                  <AlertTriangle className="w-5 h-5 text-rose-500 shrink-0 mt-0.5" />
                   <div>
                     <h4 className="font-semibold text-rose-900 dark:text-rose-200">Analysis Request Failed</h4>
                     <p className="text-xs text-rose-700 dark:text-rose-300 mt-1 leading-relaxed">{error}</p>
@@ -398,7 +398,7 @@ export default function App() {
                 {/* Manual Note / Run Title Input Field (Displayed in Timeline) */}
                 <div className="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-2xl p-4 shadow-sm flex flex-col sm:flex-row sm:items-center justify-between gap-3 no-print">
                   <div className="flex items-center gap-2.5 flex-1 max-w-2xl">
-                    <div className="p-2 rounded-xl bg-indigo-50 dark:bg-indigo-950/40 text-indigo-600 dark:text-indigo-400 border border-indigo-200 dark:border-indigo-500/20 flex-shrink-0">
+                    <div className="p-2 rounded-xl bg-indigo-50 dark:bg-indigo-950/40 text-indigo-600 dark:text-indigo-400 border border-indigo-200 dark:border-indigo-500/20 shrink-0">
                       <Bookmark className="w-4 h-4" />
                     </div>
                     <div className="flex-1 space-y-0.5">
@@ -428,8 +428,25 @@ export default function App() {
                 {/* Action Toolbar above results */}
                 <div className="flex items-center justify-between gap-3 flex-wrap no-print">
                   <div className="flex items-center gap-2 text-xs text-slate-500 dark:text-slate-400">
-                    <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse" />
-                    <span>Analysis Complete & Active</span>
+                  <span
+                    className={`w-2 h-2 rounded-full ${
+                      analysisResult.analysis_status === 'complete'
+                      ? 'bg-emerald-500 animate-pulse'
+                      : analysisResult.analysis_status === 'partial'
+                    ? 'bg-amber-500'
+                    : 'bg-slate-400'
+                    }`}
+                  />
+
+                  <span>
+                    {analysisResult.analysis_status === 'complete'
+                      ? 'Analysis Complete · Bedrock Available'
+                      : analysisResult.analysis_status === 'partial'
+                      ? 'Sentiment Analysis Complete · Bedrock Unavailable'
+                      : analysisResult.analysis_status === 'demo'
+                      ? 'Local Demo · Not AWS'
+                      : 'Analysis Complete · Source Not Reported'}
+                  </span>
                     {settings.filterLowConfidence && (
                       <span className="px-2 py-0.5 rounded bg-amber-100 dark:bg-amber-500/10 text-amber-800 dark:text-amber-300 border border-amber-300 dark:border-amber-500/20 text-[11px] font-mono">
                         Low-Confidence Filter: &lt;{Math.round(settings.confidenceThreshold * 100)}%

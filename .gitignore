@@ -29,3 +29,12 @@ htmlcov/
 # AWS CDK generated files
 cdk.out/
 **/cdk.out/
+
+# Generated SageMaker evaluation artifacts
+evaluation/results/*
+!evaluation/results/.gitkeep
+
+# Local Lambda deployment artifacts
+backend/lambda/lambda-package/
+lambda-deployment.zip
+lambda-previous.zip

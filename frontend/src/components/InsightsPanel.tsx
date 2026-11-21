@@ -19,6 +19,29 @@ export const InsightsPanel: React.FC<InsightsPanelProps> = ({
   const [completedActions, setCompletedActions] = useState<Record<number, boolean>>({});
   const [copied, setCopied] = useState(false);
   const [copiedInsights, setCopiedInsights] = useState(false);
+  const analysisStatus = fullResponse?.analysis_status ?? 'unknown';
+
+  const sourceInfo = {
+    complete: {
+      label: 'Bedrock Nova Lite',
+      description: 'Generated with Amazon Bedrock Converse API.',
+    },
+    partial: {
+      label: 'Sentiment only · Bedrock unavailable',
+      description:
+        'Sentiment classification completed. Generative insights were unavailable for this run.',
+    },
+    demo: {
+      label: 'Local demo · not AWS',
+      description:
+        'Simulated locally using a keyword-based lexicon. No AWS inference was performed.',
+    },
+    unknown: {
+      label: 'Source not reported',
+      description:
+        'The response does not identify which analysis pipeline produced these results.',
+    },
+  }[analysisStatus];
 
   const toggleAction = (index: number) => {
     setCompletedActions((prev) => ({
@@ -72,14 +95,14 @@ export const InsightsPanel: React.FC<InsightsPanelProps> = ({
           <div className="flex items-center gap-2">
             <h2 className="text-lg font-bold text-slate-900 dark:text-white flex items-center gap-2">
               <Sparkles className="w-5 h-5 text-purple-600 dark:text-purple-400" />
-              Generative Analysis & Action Plan
+              Analysis & Action Plan
             </h2>
             <span className="text-[11px] font-mono px-2 py-0.5 rounded bg-purple-50 dark:bg-purple-500/10 text-purple-700 dark:text-purple-300 border border-purple-200 dark:border-purple-500/20">
-              Bedrock Nova Lite
+              {sourceInfo.label}
             </span>
           </div>
           <p className="text-xs text-slate-500 dark:text-slate-400 mt-0.5">
-            Synthesized via Amazon Bedrock Converse API with structured JSON output
+            {sourceInfo.description}
           </p>
         </div>
 

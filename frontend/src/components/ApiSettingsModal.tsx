@@ -34,7 +34,7 @@ export const ApiSettingsModal: React.FC<ApiSettingsModalProps> = ({
   return (
     <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-slate-950/80 backdrop-blur-xs no-print">
       <div className="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-2xl w-full max-w-lg p-6 shadow-2xl space-y-5 animate-in fade-in zoom-in-95 duration-150 max-h-[90vh] overflow-y-auto">
-        
+
         {/* Header */}
         <div className="flex items-center justify-between pb-3 border-b border-slate-200 dark:border-slate-800">
           <div className="flex items-center gap-2 text-slate-900 dark:text-white font-bold text-base">
@@ -64,7 +64,7 @@ export const ApiSettingsModal: React.FC<ApiSettingsModalProps> = ({
                 Exclude comments whose SageMaker classification score is below threshold
               </p>
             </div>
-            
+
             {/* Toggle Switch */}
             <button
               id="confidence-filter-toggle"
@@ -98,6 +98,8 @@ export const ApiSettingsModal: React.FC<ApiSettingsModalProps> = ({
             </div>
 
             <input
+              id="confidence-threshold"
+              name="confidenceThreshold"
               type="range"
               min="0.50"
               max="0.95"
@@ -113,7 +115,7 @@ export const ApiSettingsModal: React.FC<ApiSettingsModalProps> = ({
               <span>70% (Recommended)</span>
               <span>95% (High Precision)</span>
             </div>
-            
+
             <p className="text-[11px] text-slate-500 dark:text-slate-400">
               Comments scoring below <span className="font-mono text-amber-700 dark:text-amber-300">{Math.round(confidenceThreshold * 100)}%</span> will be flagged and hidden from the filtered breakdown.
             </p>
@@ -170,11 +172,15 @@ export const ApiSettingsModal: React.FC<ApiSettingsModalProps> = ({
         {/* Custom API Endpoint Input */}
         {mode === 'custom' && (
           <div className="space-y-2">
-            <label className="text-xs font-semibold text-slate-700 dark:text-slate-300 flex items-center justify-between">
+            <label
+              htmlFor="api-gateway-url"
+              className="text-xs font-semibold text-slate-700 dark:text-slate-300 flex items-center justify-between">
               <span>API Gateway Endpoint URL</span>
               <span className="text-[11px] text-slate-500">Must support POST /analyze</span>
             </label>
             <input
+              id="api-gateway-url"
+              name="apiGatewayUrl"
               type="text"
               value={url}
               onChange={(e) => setUrl(e.target.value)}

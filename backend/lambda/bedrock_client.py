@@ -161,7 +161,6 @@ def generate_analysis(
             inferenceConfig={
                 "maxTokens": 1024,
                 "temperature": 0.3,
-                "topP": 0.9,
             },
         )
     except ClientError as exc:

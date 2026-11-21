@@ -166,23 +166,42 @@ def lambda_handler(event: dict[str, Any], context: Any) -> dict[str, Any]:
 
     aggregation = aggregate_results(comment_results)
 
+    analysis_status = "complete"
+
     try:
         analysis = generate_analysis(
             comments=comments,
             sentiment_results=raw_results,
             aggregation=aggregation,
         )
-    except EnvironmentError as exc:
-        logger.error("Configuration error: %s", exc)
-        return _error(500, "Server configuration error. Please contact support.")
-    except Exception as exc:
-        logger.error("Bedrock analysis failed: %s", exc, exc_info=True)
-        return _error(502, "Generative analysis service is unavailable.")
+
+    except Exception:
+        logger.exception(
+            "Bedrock unavailable. Returning sentiment-only results."
+        )
+
+        analysis_status = "partial"
+
+        analysis = {
+            "summary": (
+                "La clasificación de sentimientos se completó correctamente. "
+                "El resumen y los insights generativos no están disponibles "
+                "temporalmente porque Amazon Bedrock no pudo completar la solicitud."
+            ),
+            "main_topics": [],
+            "insights": [],
+            "suggested_actions": [],
+        }
 
     response_body = {
         **aggregation,
         **analysis,
+        "analysis_status": analysis_status,
     }
 
-    logger.info("Request completed successfully.")
+    logger.info(
+        "Request completed. analysis_status=%s",
+        analysis_status,
+    )
+
     return _ok(response_body)

@@ -1,12 +1,40 @@
+# Node.js
 node_modules/
 build/
 dist/
 coverage/
+
+# General
 .DS_Store
 *.log
+
+# Environment variables and secrets
 .env*
 !.env.example
-*.venv
-package.lock.json
-.venv*
-.pytest_cache
+
+# Python virtual environments
+.venv/
+**/.venv/
+venv/
+**/venv/
+
+# Python generated files
+__pycache__/
+**/__pycache__/
+*.py[cod]
+.pytest_cache/
+.coverage
+htmlcov/
+
+# AWS CDK generated files
+cdk.out/
+**/cdk.out/
+
+# Generated SageMaker evaluation artifacts
+evaluation/results/*
+!evaluation/results/.gitkeep
+
+# Local Lambda deployment artifacts
+backend/lambda/lambda-package/
+lambda-deployment.zip
+lambda-previous.zip
